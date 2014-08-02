@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BnotyaApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="about_main_menu">About article goes here</string>
+    <string name="about_main_tehilot">About article goes here</string>
+    <string name="about_main_women">About article goes here</string>
+    <string name="open_tehilot">Open Tehilot Page</string>
+    <string name="open_women_menu">Open Women Page</string>
+    <string name="open_self_improvement_page">Open Self Improvement Page</string>
+    <string name="open_trivia_page">Open Trivia Page</string>
+    <string name="open_random_card">Open Random Card</string>
+    <string name="open_women_list">Open Women List</string>
+
+</resources>

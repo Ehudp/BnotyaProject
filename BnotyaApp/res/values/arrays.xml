@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Women list -->
+	<string-array name="women_names_array">        
+        <item>Hava</item>
+        <item>Rivka</item>
+        <item>Rahel</item>
+        <item>Bnot Lot</item>  
+        <item>Hamesh Ahayot</item>
+        <item>Bnot Leven</item>
+        <item>Dvora</item>
+        <item>Avishag</item>   
+        <item>Nehama</item>
+        <item>Achsah</item>
+        <item>Ruth</item>
+        <item>Tamar</item>              
+    </string-array>
+
+    <!-- Navigation drawer -->
+    <string-array name="views_array">
+        <item>Home</item>
+        <item>Open Home</item>
+        <item>Tehilot</item>
+        <item>Open Tehilot</item>
+        <item>Women</item>
+        <item>Open Women List</item>
+        <item>Open Trivia Page</item> 
+        <item>Open Insight List</item>              
+    </string-array>
+    <!-- Nav Drawer List Item Icons -->    
+    <array name="nav_drawer_icons">
+        <item>0</item>
+        <item>@drawable/ic_action_search</item>
+        <item>0</item>
+        <item>@drawable/ic_action_search</item>
+        <item>0</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>        
+    </array>
+    
+    <!-- Women List Item Icons -->    
+    <array name="women_list_icons">
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item> 
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item> 
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item> 
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>           
+    </array>
+    
+</resources>

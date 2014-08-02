@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">בנותיה</string>
+    <string name="action_settings">אפשרויות</string>
+    <string name="action_about">הודות</string>
+    <string name="action_search">חיפוש</string>
+    <string name="action_home">בית</string>
+    <string name="action_exit">יציאה</string>
+    <string name="about_main_menu">About article goes here</string>
+    <string name="about_main_tehilot">About article goes here</string>
+    <string name="about_main_women">About article goes here</string>
+    <string name="open_tehilot">תהילות</string>
+    <string name="open_women_menu">נשים בתנ"\ך</string>
+    <string name="open_self_improvement_page">שיפור עצמי</string>
+    <string name="open_trivia_page">טריויה</string>
+    <string name="open_random_insight">תובנה אקראית</string>
+    <string name="open_women_list">קלפי נשים בתנ"\ך</string>
+    <string name="open_insight_list">תובנות מועדפות</string>
+    <string name="title_card_flip">קלף</string>
+    <string name="title_insight">תובנה</string>
+    <string name="description_card">Image</string>
+    <string name="about_text">About the Bnotya project</string>
+    <string name="drawer_open">פתח נווט</string>
+    <string name="drawer_close">סגור נווט</string>
+    <string name="app_not_available">מצטערים, אין דפדפן אינטרנט זמין</string>
+    <string name="page_actions">פעולות במסך</string>
+    
+    <!-- Card tabs strings -->
+    <string name="card_front">פנים</string>
+    <string name="card_back">גב</string>   
+    <string name="card_insight">תובנה</string> 
+    
+    <string name="settings_dialog_message">קבע עוצמת המוסיקה</string>
+    <string name="settings_summary">הערך הנוכחי הינו 1</string>
+    <string name="notification_time_summary">הערך הנוכחי הינו hour:minute</string>
+    <string name="settings_unit"></string>
+    <string name="settings_title">עוצמת המוסיקה</string>
+    <string name="desc_list_item_icon">Image</string>
+    <string name="correct_answer">תשובה נכונה</string>
+    <string name="wrong_answer">תשובה לא נכונה</string>
+    <string name="women_list_title">נשים בתנ"\ך</string>   
+    <string name="email_page_title">מייל</string>
+    <string name="trivia_page_title">טריויה</string>
+    <string name="chooser_title">בחר אפליקציה לשליחת המייל</string>
+    <string name="music_preferences">עדיפויות מוסיקה</string>
+    <string name="notification_preferences">עדיפויות תזכורת יומית</string>
+    <string name="pref_user_profile">עדיפויות משתמש</string>
+    <string name="pref_user_name">שם משתמש</string>
+    <string name="pref_user_name_summary">מלא שם משתמש</string>  
+    <string name="pref_default_notification_time">זמן תזכורת יומית</string>  
+    <string name="loading">טוען</string>
+    <string name="search">חיפוש</string>
+    <string name="undo">ביטול</string>
+    <string name="insight_added">תובנה נוספה למואדפים</string>
+    
+    <!-- E-Mail strings -->
+    <string name="send_email">שלח מייל</string>
+    <string name="person_email">כתובת מייל</string>
+    <string name="person_name">שם</string>
+    <string name="email_title">כותרת</string>
+    <string name="email_content">תוכן</string> 
+    
+    <!-- Key strings (DO NOT CHANGE!) -->
+	<string name="music_on_preference">musicPreference</string>
+    <string name="music_volume_preference">musicVolumePreference</string>
+    <string name="user_name_preference">prefUsername</string>
+    <string name="notification_on_preference">notificationOnPreference</string>
+    <string name="notification_time_preference">notificationTimePreference</string> 
+    
+</resources>

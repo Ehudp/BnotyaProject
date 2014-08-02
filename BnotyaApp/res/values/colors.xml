@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionbar_text">#ABAB88</color>
+    <color name="actionbar_background">#FFFBFB88</color>
+    
+    <color name="counter_text_color">#ABAB88</color>
+    <color name="counter_background">#FFDCDCDC</color>
+    
+    <color name="list_item_title">#FF000000</color>
+    <color name="list_background_start">#DD99BBEE</color>
+    <color name="list_background_end">#DD99DDEE</color>
+    <color name="list_background_pressed">#FFDCDCDC</color>
+    <color name="list_background_selected">#FFBBBBDC</color> 
+    
+    <color name="screen_background_start">#DDDCDCDC</color>
+    <color name="screen_background_end">#DD99DDEE</color>
+    
+    <color name="women_list_item_title">#FF000000</color>
+</resources>

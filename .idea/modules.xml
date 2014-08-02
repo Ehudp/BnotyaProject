@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BnotyaApp/BnotyaApp.iml" filepath="$PROJECT_DIR$/BnotyaApp/BnotyaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BnotyaAppTestsProject/BnotyaAppTestsProject.iml" filepath="$PROJECT_DIR$/BnotyaAppTestsProject/BnotyaAppTestsProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BnotyaProject.iml" filepath="$PROJECT_DIR$/BnotyaProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-support-v7-appcompat/android-support-v7-appcompat.iml" filepath="$PROJECT_DIR$/android-support-v7-appcompat/android-support-v7-appcompat.iml" />
+    </modules>
+  </component>
+</project>
+

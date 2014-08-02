@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bnotya.bnotyaapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+
+        <!-- Splash activity -->
+        <activity
+            android:name="com.bnotya.bnotyaapp.SplashActivity"
+            android:label="@string/app_name" 
+			android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main activity -->
+        <activity
+            android:name="com.bnotya.bnotyaapp.MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.bnotya.bnotyaapp.SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bnotya.bnotyaapp.SplashActivity" />
+
+            <intent-filter>
+                <action android:name="com.bnotya.bnotyaapp.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Tehilot activity -->
+        <activity
+            android:name="com.bnotya.bnotyaapp.MainTehilotActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.bnotya.bnotyaapp.MainActivity" >
+            <intent-filter>
+                <action android:name="com.bnotya.bnotyaapp.MainTehilotActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bnotya.bnotyaapp.MainActivity" />
+        </activity>
+
+        <!-- Main Women activity -->
+        <activity
+            android:name="com.bnotya.bnotyaapp.MainWomenActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.bnotya.bnotyaapp.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light" >
+            <intent-filter>
+                <action android:name="com.bnotya.bnotyaapp.MainWomenActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bnotya.bnotyaapp.MainActivity" />
+        </activity>
+
+        <!-- Trivia  activity -->
+        <activity
+            android:name="com.bnotya.bnotyaapp.TriviaActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.bnotya.bnotyaapp.MainWomenActivity" >
+            <intent-filter>
+                <action android:name="com.bnotya.bnotyaapp.TriviaActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bnotya.bnotyaapp.MainWomenActivity" />
+        </activity>
+
+        <!-- Women List activity -->
+        <activity
+            android:name="com.bnotya.bnotyaapp.WomenListActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.bnotya.bnotyaapp.MainWomenActivity" >
+            <intent-filter>
+                <action android:name="com.bnotya.bnotyaapp.WomenListActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bnotya.bnotyaapp.MainWomenActivity" />
+        </activity>
+    </application>
+
+</manifest>

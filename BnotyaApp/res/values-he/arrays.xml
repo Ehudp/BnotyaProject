@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Women list -->
+	<string-array name="women_names_array">        
+        <item>חוה</item>
+        <item>רבקה</item>
+        <item>רחל</item>
+        <item>בנות לוט</item>  
+        <item>בנות צלפחד</item>
+        <item>בנות לבן</item>
+        <item>דבורה</item>
+        <item>אבישג</item>   
+        <item>נעמה</item>
+        <item>עכסה</item>
+        <item>רות</item>
+        <item>תמר</item>              
+    </string-array>
+
+    <!-- Navigation drawer -->
+    <string-array name="views_array">
+        <item>בית</item>
+        <item>בית</item>
+        <item>תהילות</item>
+        <item>תהילות</item>
+        <item>נשים בתנ"\ך</item>
+        <item>נשים בתנ"\ך</item>
+        <item>טריויה</item> 
+        <item>תובנות</item>          
+    </string-array>
+    <!-- Nav Drawer List Item Icons -->    
+    <array name="nav_drawer_icons">
+        <item>0</item>
+        <item>@drawable/ic_action_search</item>
+        <item>0</item>
+        <item>@drawable/ic_action_search</item>
+        <item>0</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>        
+    </array>
+    
+    <!-- Women List Item Icons -->    
+    <array name="women_list_icons">
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>   
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>  
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>   
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_search</item>        
+    </array>
+    
+</resources>

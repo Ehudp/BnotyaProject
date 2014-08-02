@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BnotyaApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="action_search">Search</string>
+    <string name="action_home">Home</string>
+    <string name="action_exit">Exit</string>
+    <string name="about_main_menu">About article goes here</string>
+    <string name="about_main_tehilot">About article goes here</string>
+    <string name="about_main_women">About article goes here</string>
+    <string name="open_tehilot">Open Tehilot Page</string>
+    <string name="open_women_menu">Open Women Page</string>
+    <string name="open_self_improvement_page">Open Self Improvement Page</string>
+    <string name="open_trivia_page">Open Trivia Page</string>
+    <string name="open_random_insight">Open Random Insight</string>
+    <string name="open_women_list">Open Women List</string>
+    <string name="open_insight_list">Open Insight List</string>
+    <string name="title_card_flip">Card</string>
+    <string name="title_insight">Insight</string>
+    <string name="description_card">Image</string>
+    <string name="about_text">About the Bnotya project</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="page_actions">Page Actions</string>
+    
+    <!-- Card tabs strings -->
+    <string name="card_front">Front</string>
+    <string name="card_back">Back</string>  
+    <string name="card_insight">Insight</string>
+    
+    <string name="settings_dialog_message">Set music volume</string>
+    <string name="settings_summary">Current value is 1</string>
+    <string name="notification_time_summary">Current value is hour:minute</string>
+    <string name="settings_unit"></string>
+    <string name="settings_title">Music Volume</string>
+    <string name="desc_list_item_icon">Image</string>
+    <string name="correct_answer">Correct answer</string>
+    <string name="wrong_answer">Wrong answer</string> 
+    <string name="women_list_title">Women From Bible</string>   
+    <string name="email_page_title">EMail</string>
+    <string name="trivia_page_title">Trivia</string>
+    <string name="chooser_title">Choose App to send email:</string>
+    <string name="music_preferences">Music Preferences</string>
+    <string name="notification_preferences">Notification Preferences</string>
+    <string name="pref_user_profile">User Profile</string>
+    <string name="pref_user_name">User Name</string>
+    <string name="pref_user_name_summary">Set your username</string>
+    <string name="pref_default_notification_time">Default notification time</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="search">Search&#8230;</string>
+    <string name="undo">Undo</string>
+    <string name="insight_added">Added to favorite insights</string>
+    
+    <!-- E-Mail strings -->
+    <string name="send_email">Send E-Mail</string>
+    <string name="person_email">Your E-Mail</string>
+    <string name="person_name">Your Name</string>
+    <string name="email_title">Title</string>
+    <string name="email_content">Content</string>
+      
+    <!-- Key strings (DO NOT CHANGE!) -->
+	<string name="music_on_preference">musicPreference</string>
+    <string name="music_volume_preference">musicVolumePreference</string>
+    <string name="user_name_preference">prefUsername</string> 
+    <string name="notification_on_preference">notificationOnPreference</string> 
+    <string name="notification_time_preference">notificationTimePreference</string> 
+        
+</resources>
+
