@@ -25,6 +25,7 @@
     <string name="drawer_close">סגור נווט</string>
     <string name="app_not_available">מצטערים, אין דפדפן אינטרנט זמין</string>
     <string name="page_actions">פעולות במסך</string>
+    <string name="preferences_title">עדיפויות</string>
     
     <!-- Card tabs strings -->
     <string name="card_front">פנים</string>

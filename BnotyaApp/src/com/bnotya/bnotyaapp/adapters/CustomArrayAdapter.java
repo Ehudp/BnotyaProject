@@ -36,7 +36,7 @@ public class CustomArrayAdapter extends ArrayAdapter<ListItem> implements
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent)
 	{
-		ItemHolder holder = null;
+		ItemHolder holder;
 
 		if (convertView == null)
 		{

@@ -20,7 +20,7 @@ public abstract class AbstractNavDrawerActivity extends ActionBarActivity
 {
     private DrawerLayout _drawerLayout;
     protected ActionBarDrawerToggle _drawerToggle;
-    private ListView _drawerList;
+    protected ListView _drawerList;
     private CharSequence _drawerTitle;
     private CharSequence _title;
     protected NavDrawerActivityConfiguration _navConf;

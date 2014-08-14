@@ -18,7 +18,7 @@ import java.util.Locale;
 
 public class DatabaseHelper extends SQLiteOpenHelper
 {
-	private static DatabaseHelper instance;
+	private static DatabaseHelper _instance;
 
 	// Logcat tag
 	private static final String LOG = "DatabaseHelper";
@@ -80,11 +80,11 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
 	public static DatabaseHelper getInstance(Context context)
 	{
-		if (instance == null)
+		if (_instance == null)
 		{
-			instance = new DatabaseHelper(context.getApplicationContext());
+			_instance = new DatabaseHelper(context.getApplicationContext());
 		}
-		return instance;
+		return _instance;
 	}
 
 	private DatabaseHelper(Context context)
@@ -588,7 +588,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
 				boolean isFavorite = (c.getInt(c.getColumnIndex(KEY_IS_FAVORITE)) == 1);
 				String name = c.getString(c.getColumnIndex(KEY_NAME));
 				int id = c.getInt(c.getColumnIndex(KEY_ID));
-				Insight insight = new Insight((int)id, isFavorite, name, context.getResources(), context.getPackageName());
+				Insight insight = new Insight(id, isFavorite, name, context.getResources(), context.getPackageName());
 
 				// adding to insights list
 				insights.add(insight);
@@ -618,7 +618,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
 			{						
 				int id = c.getInt(c.getColumnIndex(KEY_ID));
 				String name = c.getString(c.getColumnIndex(KEY_NAME));
-				Insight insight = new Insight((int)id, true, name, context.getResources(), context.getPackageName());
+				Insight insight = new Insight(id, true, name, context.getResources(), context.getPackageName());
 
 				// adding to insights list
 				insights.add(insight);

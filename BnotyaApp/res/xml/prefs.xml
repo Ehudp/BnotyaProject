@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/preferences_title">
     
     <PreferenceCategory android:title="@string/pref_user_profile" >
         <EditTextPreference
@@ -9,20 +10,21 @@
     </PreferenceCategory>    
     
     <PreferenceCategory android:title="@string/music_preferences" >
-    
-	    <CheckBoxPreference android:title="Music"
+
+        <CheckBoxPreference android:title="Music"
 	        android:defaultValue="true"
 	        android:key="@string/music_on_preference"
 	        android:summary="Music On/Off"/>
 				
 	    <com.bnotya.bnotyaapp.controls.SeekBarPreference
-	            android:defaultValue="8"
 	            android:dialogMessage="@string/settings_dialog_message"
 	            android:key="@string/music_volume_preference"
 	            android:max="15"
 	            android:summary="@string/settings_summary"
 	            android:text="@string/settings_unit"
-	            android:title="@string/settings_title" />
+	            android:title="@string/settings_title"
+                android:dependency="@string/music_on_preference"/>
+        <!--android:defaultValue="8"-->
     
 	</PreferenceCategory>
 	
@@ -38,7 +40,8 @@
 			  android:summary="@string/notification_time_summary"
 			  android:dialogLayout="@layout/time_preference"
 			  android:title="@string/pref_default_notification_time"
-			  android:key="@string/notification_time_preference" />
+			  android:key="@string/notification_time_preference"
+              android:dependency="@string/notification_on_preference"/>
         
     </PreferenceCategory>  
     

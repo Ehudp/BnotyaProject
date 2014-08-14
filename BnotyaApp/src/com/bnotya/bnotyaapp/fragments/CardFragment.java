@@ -6,12 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import com.bnotya.bnotyaapp.CardFlipActivity;
-import com.bnotya.bnotyaapp.CardFlipActivity.CardPart;
 import com.bnotya.bnotyaapp.R;
 
 public class CardFragment extends Fragment
 {
+    protected ImageView _cardView;
+
 	public CardFragment()
 	{
 		// Empty constructor required for fragment subclasses
@@ -23,15 +23,16 @@ public class CardFragment extends Fragment
 	{
 		View view = inflater.inflate(R.layout.fragment_card, container,
 				false);
-		ImageView cardView = (ImageView) view.findViewById(R.id.card);
-		
-		if (((CardFlipActivity) getActivity()).visibleSide == CardPart.BACK)
-			cardView.setImageResource(((CardFlipActivity) getActivity()).card.getBackId());
-		else if (((CardFlipActivity) getActivity()).visibleSide == CardPart.FRONT)
-			cardView.setImageResource(((CardFlipActivity) getActivity()).card.getFrontId());
-		else if (((CardFlipActivity) getActivity()).visibleSide == CardPart.INSIGHT)
-			cardView.setImageResource(((CardFlipActivity) getActivity()).card.getInsightId());
+		_cardView = (ImageView) view.findViewById(R.id.card);
+        _cardView.setImageDrawable(null);
 		
 		return view;
 	}
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        _cardView.setImageDrawable(null);
+    }
 }

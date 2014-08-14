@@ -2,13 +2,12 @@ package com.bnotya.bnotyaapp.models;
 
 public class NavMenuItem implements INavDrawerItem
 {
+    public static final int ITEM_TYPE = 1;
 
-    public static final int ITEM_TYPE = 1 ;
-
-    private int id ;
-    private String label ;
-    private int icon ;
-    private boolean updateActionBarTitle ;
+    private int _id;
+    private String _label;
+    private int _icon;
+    private boolean _updateActionBarTitle;
 
     private NavMenuItem() {
     }
@@ -29,27 +28,27 @@ public class NavMenuItem implements INavDrawerItem
     }
 
     public int getId() {
-        return id;
+        return _id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        _id = id;
     }
 
     public String getLabel() {
-        return label;
+        return _label;
     }
 
     public void setLabel(String label) {
-        this.label = label;
+        _label = label;
     }
 
     public int getIcon() {
-        return icon;
+        return _icon;
     }
 
     public void setIcon(int icon) {
-        this.icon = icon;
+        _icon = icon;
     }
 
     @Override
@@ -59,10 +58,10 @@ public class NavMenuItem implements INavDrawerItem
 
     @Override
     public boolean updateActionBarTitle() {
-        return this.updateActionBarTitle;
+        return _updateActionBarTitle;
     }
 
     public void setUpdateActionBarTitle(boolean updateActionBarTitle) {
-        this.updateActionBarTitle = updateActionBarTitle;
+        _updateActionBarTitle = updateActionBarTitle;
     }
 }

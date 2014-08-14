@@ -24,11 +24,10 @@ import java.util.List;
 
 public class TriviaActivity extends ActionBarActivity implements OnCheckedChangeListener
 {
-	
-	SoundPool _soundPool;
-	int _correctSound = 0;
-	TextView _questionView;
-	RadioGroup _answers;
+	private SoundPool _soundPool;
+	private int _correctSound = 0;
+	private TextView _questionView;
+	private RadioGroup _answers;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -36,7 +35,8 @@ public class TriviaActivity extends ActionBarActivity implements OnCheckedChange
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.trivia_view);
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
 		{
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 			getActionBar().setHomeButtonEnabled(true);

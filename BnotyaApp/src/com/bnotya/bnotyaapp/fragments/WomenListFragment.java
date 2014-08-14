@@ -2,7 +2,7 @@ package com.bnotya.bnotyaapp.fragments;
 
 import java.util.ArrayList;
 import java.util.List;
-import android.content.Intent;
+
 import android.content.res.TypedArray;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,17 +16,17 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
-import com.bnotya.bnotyaapp.CardFlipActivity;
+
 import com.bnotya.bnotyaapp.R;
 import com.bnotya.bnotyaapp.adapters.CustomArrayAdapter;
 import com.bnotya.bnotyaapp.models.ListItem;
 
 public class WomenListFragment extends Fragment
 {
-	public static final String ARG_VIEW_NUMBER = "view_number";
-	private ListView _listView;
-	private EditText _inputSearch;
+	ListView _listView;
+	EditText _inputSearch;
 	private CustomArrayAdapter _adapter;
+    private ICommunicator _communicator;
 
 	public WomenListFragment()
 	{
@@ -39,8 +39,6 @@ public class WomenListFragment extends Fragment
 	{
 		View rootView = inflater.inflate(R.layout.women_list_view, container,
 				false);
-
-		getActivity().setTitle(R.string.women_list_title);
 		
 		initWomenList(rootView);			
 		initSearch(rootView);
@@ -70,13 +68,25 @@ public class WomenListFragment extends Fragment
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id)
 			{
-				Intent intent = new Intent(getActivity(),
-						CardFlipActivity.class);
-				intent.putExtra("EXTRA_SESSION_ID", position);
-				startActivity(intent);
+//				Intent intent = new Intent(getActivity(),
+//						CardFlipActivity.class);
+//				intent.putExtra("EXTRA_SESSION_ID", position);
+//				startActivity(intent);
+
+                _communicator.respondToWomenListSelect(position);
 			}
 		});
-	}		
+	}
+
+    public void setCommunicator(ICommunicator communicator)
+    {
+        _communicator = communicator;
+    }
+
+    public interface ICommunicator
+    {
+        public void respondToWomenListSelect(int index);
+    }
 	
 	private List<ListItem> fillData(int titlesID, int iconsID)
 	{		

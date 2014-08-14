@@ -1,91 +1,108 @@
 package com.bnotya.bnotyaapp;
 
 import android.widget.BaseAdapter;
-
 import com.bnotya.bnotyaapp.models.INavDrawerItem;
 
-public class NavDrawerActivityConfiguration {
+public class NavDrawerActivityConfiguration
+{
+    private int _mainLayout;
+    private int _drawerShadow;
+    private int _drawerLayoutId;
+    private int _leftDrawerId;
+    private int[] _actionMenuItemsToHideWhenDrawerOpen;
+    private INavDrawerItem[] _navItems;
+    private int _drawerOpenDesc;
+    private int _drawerCloseDesc;
+    private BaseAdapter _baseAdapter;
 
-    private int mainLayout;
-    private int drawerShadow;
-    private int drawerLayoutId;
-    private int leftDrawerId;
-    private int[] actionMenuItemsToHideWhenDrawerOpen;
-    private INavDrawerItem[] navItems;
-    private int drawerOpenDesc;
-    private int drawerCloseDesc;
-    private BaseAdapter baseAdapter;
-
-    public int getMainLayout() {
-        return mainLayout;
+    public int getMainLayout()
+    {
+        return _mainLayout;
     }
 
-    public void setMainLayout(int mainLayout) {
-        this.mainLayout = mainLayout;
+    public void setMainLayout(int mainLayout)
+    {
+        _mainLayout = mainLayout;
     }
 
-    public int getDrawerShadow() {
-        return drawerShadow;
+    public int getDrawerShadow()
+    {
+        return _drawerShadow;
     }
 
-    public void setDrawerShadow(int drawerShadow) {
-        this.drawerShadow = drawerShadow;
+    public void setDrawerShadow(int drawerShadow)
+    {
+        _drawerShadow = drawerShadow;
     }
 
-    public int getDrawerLayoutId() {
-        return drawerLayoutId;
+    public int getDrawerLayoutId()
+    {
+        return _drawerLayoutId;
     }
 
-    public void setDrawerLayoutId(int drawerLayoutId) {
-        this.drawerLayoutId = drawerLayoutId;
+    public void setDrawerLayoutId(int drawerLayoutId)
+    {
+        _drawerLayoutId = drawerLayoutId;
     }
 
-    public int getLeftDrawerId() {
-        return leftDrawerId;
+    public int getLeftDrawerId()
+    {
+        return _leftDrawerId;
     }
 
-    public void setLeftDrawerId(int leftDrawerId) {
-        this.leftDrawerId = leftDrawerId;
+    public void setLeftDrawerId(int leftDrawerId)
+    {
+        _leftDrawerId = leftDrawerId;
     }
 
-    public int[] getActionMenuItemsToHideWhenDrawerOpen() {
-        return actionMenuItemsToHideWhenDrawerOpen;
+    public int[] getActionMenuItemsToHideWhenDrawerOpen()
+    {
+        return _actionMenuItemsToHideWhenDrawerOpen;
     }
 
     public void setActionMenuItemsToHideWhenDrawerOpen(
-            int[] actionMenuItemsToHideWhenDrawerOpen) {
-        this.actionMenuItemsToHideWhenDrawerOpen = actionMenuItemsToHideWhenDrawerOpen;
+            int[] actionMenuItemsToHideWhenDrawerOpen)
+    {
+        _actionMenuItemsToHideWhenDrawerOpen = actionMenuItemsToHideWhenDrawerOpen;
     }
 
-    public INavDrawerItem[] getNavItems() {
-        return navItems;
+    public INavDrawerItem[] getNavItems()
+    {
+        return _navItems;
     }
 
-    public void setNavItems(INavDrawerItem[] navItems) {
-        this.navItems = navItems;
+    public void setNavItems(INavDrawerItem[] navItems)
+    {
+        _navItems = navItems;
     }
 
-    public int getDrawerOpenDesc() {
-        return drawerOpenDesc;
+    public int getDrawerOpenDesc()
+    {
+        return _drawerOpenDesc;
     }
 
-    public void setDrawerOpenDesc(int drawerOpenDesc) {
-        this.drawerOpenDesc = drawerOpenDesc;
+    public void setDrawerOpenDesc(int drawerOpenDesc)
+    {
+        _drawerOpenDesc = drawerOpenDesc;
     }
 
-    public int getDrawerCloseDesc() {
-        return drawerCloseDesc;
+    public int getDrawerCloseDesc()
+    {
+        return _drawerCloseDesc;
     }
 
-    public void setDrawerCloseDesc(int drawerCloseDesc) {
-        this.drawerCloseDesc = drawerCloseDesc;
+    public void setDrawerCloseDesc(int drawerCloseDesc)
+    {
+        _drawerCloseDesc = drawerCloseDesc;
     }
 
-    public BaseAdapter getBaseAdapter() {
-        return baseAdapter;
+    public BaseAdapter getBaseAdapter()
+    {
+        return _baseAdapter;
     }
 
-    public void setBaseAdapter(BaseAdapter baseAdapter) {
-        this.baseAdapter = baseAdapter;
+    public void setBaseAdapter(BaseAdapter baseAdapter)
+    {
+        _baseAdapter = baseAdapter;
     }
 }

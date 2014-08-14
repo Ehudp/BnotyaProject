@@ -6,40 +6,48 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 
-public class DragSortItemView extends ViewGroup {
+public class DragSortItemView extends ViewGroup
+{
+    private int _gravity = Gravity.TOP;
 
-    private int mGravity = Gravity.TOP;
-
-    public DragSortItemView(Context context) {
+    public DragSortItemView(Context context)
+    {
         super(context);
 
         // always init with standard ListView layout params
         setLayoutParams(new AbsListView.LayoutParams(
-                ViewGroup.LayoutParams.FILL_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
 
         //setClipChildren(true);
     }
 
-    public void setGravity(int gravity) {
-        mGravity = gravity;
+    public void setGravity(int gravity)
+    {
+        _gravity = gravity;
     }
 
-    public int getGravity() {
-        return mGravity;
+    public int getGravity()
+    {
+        return _gravity;
     }
 
     @Override
-    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom)
+    {
         final View child = getChildAt(0);
 
-        if (child == null) {
+        if (child == null)
+        {
             return;
         }
 
-        if (mGravity == Gravity.TOP) {
+        if (_gravity == Gravity.TOP)
+        {
             child.layout(0, 0, getMeasuredWidth(), child.getMeasuredHeight());
-        } else {
+        }
+        else
+        {
             child.layout(0, getMeasuredHeight() - child.getMeasuredHeight(), getMeasuredWidth(), getMeasuredHeight());
         }
     }
@@ -48,31 +56,37 @@ public class DragSortItemView extends ViewGroup {
      *
      */
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
+    {
         int height = MeasureSpec.getSize(heightMeasureSpec);
         int width = MeasureSpec.getSize(widthMeasureSpec);
 
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
 
         final View child = getChildAt(0);
-        if (child == null) {
+        if (child == null)
+        {
             setMeasuredDimension(0, width);
             return;
         }
 
-        if (child.isLayoutRequested()) {
+        if (child.isLayoutRequested())
+        {
             // Always let child be as tall as it wants.
             measureChild(child, widthMeasureSpec,
                     MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
         }
 
-        if (heightMode == MeasureSpec.UNSPECIFIED) {
+        if (heightMode == MeasureSpec.UNSPECIFIED)
+        {
             ViewGroup.LayoutParams lp = getLayoutParams();
 
-            if (lp.height > 0) {
+            if (lp.height > 0)
+            {
                 height = lp.height;
-            } else {
+            }
+            else
+            {
                 height = child.getMeasuredHeight();
             }
         }

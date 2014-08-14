@@ -10,20 +10,20 @@ import android.view.ViewGroup;
 
 public class SimpleFloatViewManager implements DragSortListView.FloatViewManager {
 
-    private Bitmap mFloatBitmap;
+    private Bitmap _floatBitmap;
 
-    private ImageView mImageView;
+    private ImageView _imageView;
 
-    private int mFloatBGColor = Color.BLACK;
+    private int _floatBGColor = Color.BLACK;
 
-    private ListView mListView;
+    private ListView _listView;
 
     public SimpleFloatViewManager(ListView lv) {
-        mListView = lv;
+        _listView = lv;
     }
 
     public void setBackgroundColor(int color) {
-        mFloatBGColor = color;
+        _floatBGColor = color;
     }
 
     /**
@@ -34,7 +34,7 @@ public class SimpleFloatViewManager implements DragSortListView.FloatViewManager
     public View onCreateFloatView(int position) {
         // Guaranteed that this will not be null? I think so. Nope, got
         // a NullPointerException once...
-        View v = mListView.getChildAt(position + mListView.getHeaderViewsCount() - mListView.getFirstVisiblePosition());
+        View v = _listView.getChildAt(position + _listView.getHeaderViewsCount() - _listView.getFirstVisiblePosition());
 
         if (v == null) {
             return null;
@@ -46,18 +46,18 @@ public class SimpleFloatViewManager implements DragSortListView.FloatViewManager
         // recycled by the framework when the list tries to clean up memory
         //v.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         v.setDrawingCacheEnabled(true);
-        mFloatBitmap = Bitmap.createBitmap(v.getDrawingCache());
+        _floatBitmap = Bitmap.createBitmap(v.getDrawingCache());
         v.setDrawingCacheEnabled(false);
 
-        if (mImageView == null) {
-            mImageView = new ImageView(mListView.getContext());
+        if (_imageView == null) {
+            _imageView = new ImageView(_listView.getContext());
         }
-        mImageView.setBackgroundColor(mFloatBGColor);
-        mImageView.setPadding(0, 0, 0, 0);
-        mImageView.setImageBitmap(mFloatBitmap);
-        mImageView.setLayoutParams(new ViewGroup.LayoutParams(v.getWidth(), v.getHeight()));
+        _imageView.setBackgroundColor(_floatBGColor);
+        _imageView.setPadding(0, 0, 0, 0);
+        _imageView.setImageBitmap(_floatBitmap);
+        _imageView.setLayoutParams(new ViewGroup.LayoutParams(v.getWidth(), v.getHeight()));
 
-        return mImageView;
+        return _imageView;
     }
 
     /**
@@ -76,7 +76,7 @@ public class SimpleFloatViewManager implements DragSortListView.FloatViewManager
     public void onDestroyFloatView(View floatView) {
         ((ImageView) floatView).setImageDrawable(null);
 
-        mFloatBitmap.recycle();
-        mFloatBitmap = null;
+        _floatBitmap.recycle();
+        _floatBitmap = null;
     }
 }

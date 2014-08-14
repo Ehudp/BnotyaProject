@@ -27,6 +27,24 @@ public class Card
 		
 		_id = cardId;
     }
+
+    public Card(int id, Resources resources, String packageName)
+    {
+        int cardId = 1;
+
+        cardId += id;
+
+        _frontId = resources.getIdentifier(String.format("card%s", cardId),
+                "drawable", packageName);
+        _backId = resources.getIdentifier(
+                String.format("card%sa", cardId), "drawable",
+                packageName);
+        _insightId = resources.getIdentifier(
+                String.format("card%sb", cardId), "drawable",
+                packageName);
+
+        _id = cardId;
+    }
     
     public int getInsightId()
     {

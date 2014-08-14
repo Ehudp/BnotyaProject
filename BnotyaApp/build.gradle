@@ -2,11 +2,9 @@ apply plugin: 'android'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile project(':android-support-v7-appcompat')
+    compile('com.android.support:support-v4:18.0.+')
+    compile('com.android.support:appcompat-v7:18.0.+')
 }
-
-component1_srcdirs = ['src']
-component2_srcdirs = ['src/com.mobeta.android.dslv']
 
 android {
     compileSdkVersion 19
@@ -14,7 +12,7 @@ android {
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = component1_srcdirs + component2_srcdirs
+            java.srcDirs = ['src']
             resources.srcDirs = ['src']
             aidl.srcDirs = ['src']
             renderscript.srcDirs = ['src']

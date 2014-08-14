@@ -9,8 +9,6 @@ import com.bnotya.bnotyaapp.R;
 
 public class MainTehilotFragment extends Fragment
 {
-	public static final String ARG_VIEW_NUMBER = "view_number";
-
 	public MainTehilotFragment()
 	{
 		// Empty constructor required for fragment subclasses
@@ -20,12 +18,7 @@ public class MainTehilotFragment extends Fragment
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState)
 	{
-		View rootView = inflater.inflate(R.layout.fragment_main_tehilot,
+		return inflater.inflate(R.layout.fragment_main_tehilot,
 				container, false);
-
-		int i = getArguments().getInt(ARG_VIEW_NUMBER);
-		String viewTitle = getResources().getStringArray(R.array.views_array)[i];
-		getActivity().setTitle(viewTitle);
-		return rootView;
 	}
 }

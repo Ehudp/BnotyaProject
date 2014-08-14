@@ -1,4 +1,4 @@
 BnotyaProject
 =============
 
-BnotyaProject_android-studio
+BnotyaProject

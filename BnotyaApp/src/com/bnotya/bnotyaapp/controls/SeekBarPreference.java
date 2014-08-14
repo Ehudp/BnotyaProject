@@ -28,14 +28,18 @@ public class SeekBarPreference extends DialogPreference implements
 {
 	// ------------------------------------------------------------------------------------------
 	// Private attributes :
-	private static final String androidns = "http://schemas.android.com/apk/res/android";
+	private static final String _androidNS = "http://schemas.android.com/apk/res/android";
 
-	private SeekBar mSeekBar;
-	private TextView mSplashText, mValueText;
-	private Context mContext;
+	private SeekBar _seekBar;
+	private TextView _splashText;
+    private TextView _valueText;
+	private Context _context;
 
-	private String mDialogMessage, mSuffix;
-	private int mDefault, mMax, mValue = 0;
+	private String _dialogMessage;
+    private String _suffix;
+	private int _default = 0;
+    private int _max = 0;
+    private int _value = 0;
 
 	// ------------------------------------------------------------------------------------------
 
@@ -43,29 +47,28 @@ public class SeekBarPreference extends DialogPreference implements
 	// Constructor :
 	public SeekBarPreference(Context context, AttributeSet attrs)
 	{
-
 		super(context, attrs);
-		mContext = context;
+		_context = context;
 
 		// Get string value for dialogMessage :
-		int mDialogMessageId = attrs.getAttributeResourceValue(androidns,
+		int mDialogMessageId = attrs.getAttributeResourceValue(_androidNS,
 				"dialogMessage", 0);
 		if (mDialogMessageId == 0)
-			mDialogMessage = attrs
-					.getAttributeValue(androidns, "dialogMessage");
+			_dialogMessage = attrs
+					.getAttributeValue(_androidNS, "dialogMessage");
 		else
-			mDialogMessage = mContext.getString(mDialogMessageId);
+			_dialogMessage = _context.getString(mDialogMessageId);
 
 		// Get string value for suffix (text attribute in xml file) :
-		int mSuffixId = attrs.getAttributeResourceValue(androidns, "text", 0);
+		int mSuffixId = attrs.getAttributeResourceValue(_androidNS, "text", 0);
 		if (mSuffixId == 0)
-			mSuffix = attrs.getAttributeValue(androidns, "text");
+			_suffix = attrs.getAttributeValue(_androidNS, "text");
 		else
-			mSuffix = mContext.getString(mSuffixId);
+			_suffix = _context.getString(mSuffixId);
 
 		// Get default and max seekbar values :
-		mDefault = attrs.getAttributeIntValue(androidns, "defaultValue", 0);
-		mMax = attrs.getAttributeIntValue(androidns, "max", 100);
+		_default = attrs.getAttributeIntValue(_androidNS, "defaultValue", 0);
+		_max = attrs.getAttributeIntValue(_androidNS, "max", 100);
 	}
 
 	// ------------------------------------------------------------------------------------------
@@ -76,33 +79,33 @@ public class SeekBarPreference extends DialogPreference implements
 	protected View onCreateDialogView()
 	{
 		LinearLayout.LayoutParams params;
-		LinearLayout layout = new LinearLayout(mContext);
+		LinearLayout layout = new LinearLayout(_context);
 		layout.setOrientation(LinearLayout.VERTICAL);
 		layout.setPadding(6, 6, 6, 6);
 
-		mSplashText = new TextView(mContext);
-		mSplashText.setPadding(30, 10, 30, 10);
-		if (mDialogMessage != null) mSplashText.setText(mDialogMessage);
-		layout.addView(mSplashText);
+		_splashText = new TextView(_context);
+		_splashText.setPadding(30, 10, 30, 10);
+		if (_dialogMessage != null) _splashText.setText(_dialogMessage);
+		layout.addView(_splashText);
 
-		mValueText = new TextView(mContext);
-		mValueText.setGravity(Gravity.CENTER_HORIZONTAL);
-		mValueText.setTextSize(32);
+		_valueText = new TextView(_context);
+		_valueText.setGravity(Gravity.CENTER_HORIZONTAL);
+		_valueText.setTextSize(32);
 		params = new LinearLayout.LayoutParams(
 				LinearLayout.LayoutParams.MATCH_PARENT,
 				LinearLayout.LayoutParams.WRAP_CONTENT);
-		layout.addView(mValueText, params);
+		layout.addView(_valueText, params);
 
-		mSeekBar = new SeekBar(mContext);
-		mSeekBar.setOnSeekBarChangeListener(this);
-		layout.addView(mSeekBar, new LinearLayout.LayoutParams(
+		_seekBar = new SeekBar(_context);
+		_seekBar.setOnSeekBarChangeListener(this);
+		layout.addView(_seekBar, new LinearLayout.LayoutParams(
 				LinearLayout.LayoutParams.MATCH_PARENT,
 				LinearLayout.LayoutParams.WRAP_CONTENT));
 
-		if (shouldPersist()) mValue = getPersistedInt(mDefault);
+		if (shouldPersist()) _value = getPersistedInt(_default);
 
-		mSeekBar.setMax(mMax);
-		mSeekBar.setProgress(mValue);
+		_seekBar.setMax(_max);
+		_seekBar.setProgress(_value);
 
 		return layout;
 	}
@@ -111,8 +114,8 @@ public class SeekBarPreference extends DialogPreference implements
 	protected void onBindDialogView(View v)
 	{
 		super.onBindDialogView(v);
-		mSeekBar.setMax(mMax);
-		mSeekBar.setProgress(mValue);
+		_seekBar.setMax(_max);
+		_seekBar.setProgress(_value);
 	}
 
 	@Override
@@ -120,9 +123,9 @@ public class SeekBarPreference extends DialogPreference implements
 	{
 		super.onSetInitialValue(restore, defaultValue);
 		if (restore)
-			mValue = shouldPersist() ? getPersistedInt(mDefault) : 0;
+			_value = shouldPersist() ? getPersistedInt(_default) : 0;
 		else
-			mValue = (Integer) defaultValue;
+			_value = (Integer) defaultValue;
 	}
 
 	// ------------------------------------------------------------------------------------------
@@ -133,7 +136,7 @@ public class SeekBarPreference extends DialogPreference implements
 	public void onProgressChanged(SeekBar seek, int value, boolean fromTouch)
 	{
 		String t = String.valueOf(value);
-		mValueText.setText(mSuffix == null ? t : t.concat(" " + mSuffix));
+		_valueText.setText(_suffix == null ? t : t.concat(" " + _suffix));
 	}
 
 	@Override
@@ -148,23 +151,23 @@ public class SeekBarPreference extends DialogPreference implements
 
 	public void setMax(int max)
 	{
-		mMax = max;
+		_max = max;
 	}
 
 	public int getMax()
 	{
-		return mMax;
+		return _max;
 	}
 
 	public void setProgress(int progress)
 	{
-		mValue = progress;
-		if (mSeekBar != null) mSeekBar.setProgress(progress);
+		_value = progress;
+		if (_seekBar != null) _seekBar.setProgress(progress);
 	}
 
 	public int getProgress()
 	{
-		return mValue;
+		return _value;
 	}
 
 	// ------------------------------------------------------------------------------------------
@@ -189,12 +192,12 @@ public class SeekBarPreference extends DialogPreference implements
 		if (shouldPersist())
 		{
 
-			mValue = mSeekBar.getProgress();
-			persistInt(mSeekBar.getProgress());
-			callChangeListener(Integer.valueOf(mSeekBar.getProgress()));
+			_value = _seekBar.getProgress();
+			persistInt(_seekBar.getProgress());
+			callChangeListener(Integer.valueOf(_seekBar.getProgress()));
 		}
 
-		((AlertDialog) getDialog()).dismiss();
+		getDialog().dismiss();
 	}
 	// ------------------------------------------------------------------------------------------
 }

@@ -4,8 +4,8 @@ package com.bnotya.bnotyaapp.models;
 public class NavMenuSection implements INavDrawerItem
 {
     public static final int SECTION_TYPE = 0;
-    private int id;
-    private String label;
+    private int _id;
+    private String _label;
 
     private NavMenuSection() {
     }
@@ -22,11 +22,11 @@ public class NavMenuSection implements INavDrawerItem
     }
 
     public String getLabel() {
-        return label;
+        return _label;
     }
 
     public void setLabel(String label) {
-        this.label = label;
+        _label = label;
     }
 
     @Override
@@ -35,11 +35,11 @@ public class NavMenuSection implements INavDrawerItem
     }
 
     public int getId() {
-        return id;
+        return _id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        _id = id;
     }
 
     @Override

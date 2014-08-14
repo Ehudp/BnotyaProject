@@ -19,7 +19,6 @@ import java.util.List;
 
 public class TriviaFragment extends Fragment implements OnCheckedChangeListener
 {
-	public static final String ARG_VIEW_NUMBER = "view_number";
 	// Database Helper
 	DatabaseHelper _db;
 	
@@ -37,8 +36,6 @@ public class TriviaFragment extends Fragment implements OnCheckedChangeListener
 	{
 		View rootView = inflater.inflate(R.layout.trivia_view,
 				container, false);
-		
-		getActivity().setTitle(R.string.trivia_page_title);
 		
 		_questionView = (TextView) rootView.findViewById(R.id.tvQuestion);
 		_answers = (RadioGroup) rootView.findViewById(R.id.rgAnswers);

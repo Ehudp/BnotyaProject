@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/preferences_title">
+
+    <PreferenceCategory android:title="@string/pref_user_profile" >
+        <EditTextPreference
+            android:title="@string/pref_user_name"
+            android:summary="@string/pref_user_name_summary"
+            android:key="@string/user_name_preference"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/music_preferences" >
+
+        <SwitchPreference android:title="Music"
+                            android:defaultValue="true"
+                            android:key="@string/music_on_preference"
+                            android:summary="Music On/Off"/>
+
+        <com.bnotya.bnotyaapp.controls.SeekBarPreference
+            android:dialogMessage="@string/settings_dialog_message"
+            android:key="@string/music_volume_preference"
+            android:max="15"
+            android:summary="@string/settings_summary"
+            android:text="@string/settings_unit"
+            android:title="@string/settings_title"
+            android:dependency="@string/music_on_preference"/>
+        <!--android:defaultValue="8"-->
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/notification_preferences" >
+
+        <SwitchPreference android:title="Notification"
+                            android:defaultValue="false"
+                            android:key="@string/notification_on_preference"
+                            android:summary="Notification On/Off"/>
+
+        <com.bnotya.bnotyaapp.controls.TimePreference
+            android:name="@string/pref_default_notification_time"
+            android:summary="@string/notification_time_summary"
+            android:dialogLayout="@layout/time_preference"
+            android:title="@string/pref_default_notification_time"
+            android:key="@string/notification_time_preference"
+            android:dependency="@string/notification_on_preference"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

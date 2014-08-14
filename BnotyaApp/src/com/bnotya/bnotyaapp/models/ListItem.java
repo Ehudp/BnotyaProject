@@ -2,8 +2,8 @@ package com.bnotya.bnotyaapp.models;
 
 public class ListItem
 {
-	private String title;
-	private int icon;
+	private String _title;
+	private int _icon;
 
 	public ListItem()
 	{
@@ -11,27 +11,27 @@ public class ListItem
 
 	public ListItem(String title, int icon)
 	{
-		this.title = title;
-		this.icon = icon;
+		_title = title;
+		_icon = icon;
 	}
 
 	public String getTitle()
 	{
-		return this.title;
+		return _title;
 	}
 
 	public int getIcon()
 	{
-		return this.icon;
+		return _icon;
 	}
 
 	public void setTitle(String title)
 	{
-		this.title = title;
+		_title = title;
 	}
 
 	public void setIcon(int icon)
 	{
-		this.icon = icon;
+		_icon = icon;
 	}
 }
